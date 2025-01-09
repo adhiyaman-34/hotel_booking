@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Smart - Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #4A90E2;
+        }
+        .progress {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .progress div {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #4A90E2;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        .progress div.active {
+            background-color: #0038CC;
+        }
+        .step {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .payment-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .payment-info div {
+            width: 48%;
+        }
+        .payment-info div p {
+            font-size: 16px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .pay-now {
+            background-color: #0047FF;
+            color: #fff;
+            border: none;
+        }
+        .cancel {
+            background-color: #ccc;
+            color: #333;
+            border: none;
+        }
+        .pay-now:hover {
+            background-color: #0038CC;
+        }
+        .cancel:hover {
+            background-color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">
+            <div class="active">1</div>
+            <div class="active">2</div>
+            <div>3</div>
+        </div>
+        <h1>Payment</h1>
+        <p class="step">Kindly follow the instructions below</p>
+
+        <!-- Payment Information Section -->
+        <div class="payment-info">
+            <div>
+                <p><strong>Transfer Stay Smart:</strong></p>
+                <p>2 Days at Blue Origin Fams, Galle, Sri Lanka</p>
+            </div>
+            <div>
+                <p><strong>Total:</strong> ₹4000</p>
+                <p><strong>Initial Payment:</strong> ₹2000</p>
+            </div>
+        </div>
+
+        <!-- Payment Form Section -->
+        <div class="form-container">
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="Payment card number">
+            </div>
+            <div class="form-group">
+                <label for="bank">Bank</label>
+                <select id="bank">
+                    <option>Select Bank</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exp-date">Exp Date</label>
+                <input type="text" id="exp-date" placeholder="Validation date">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="Beside the card">
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="buttons">
+            <button class="pay-now">Pay Now</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
